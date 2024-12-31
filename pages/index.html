@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weirdstore Documentation</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <header class="header">
+        <h1>Weirdstore</h1>
+        <p>Your ultimate store management solution.</p>
+    </header>
+
+    <nav class="navbar">
+        <ul>
+            <li><a href="#introduction">Introduction</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#architecture">Architecture</a></li>
+            <li><a href="#github">Github</a></li>
+            <li><a href="#setup">Setup</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <!-- Introduction Section -->
+        <section id="introduction" class="section">
+            <h2>Introduction</h2>
+            <p><strong>Weirdstore</strong> is a store management system designed to
+                simplify and enhance the way you run your store. Whether you are managing a small boutique or a large
+                retail chain, Weirdstore provides the tools you need to succeed.</p>
+        </section>
+
+        <section id="github" class="section">
+            <h2>GitHub Repository</h2>
+            <p><a href="https://github.com/Doguhannilt/Weirdstore-Fullstack">Weirdstore-Fullstack</a></p>
+        </section>
+
+        <!-- Services Section -->
+        <section id="services" class="section">
+            <h2>Services Overview</h2>
+            <div class="service-card">
+                <h3>Category Service</h3>
+                <p>Handles all operations related to categories.</p>
+                <ul>
+                    <li>Manage category data: Create, Read, Update, Delete.</li>
+                    <li>Endpoints:
+                        <ul>
+                            <li><code>POST /</code>: Create Category</li>
+                            <li><code>GET /categories</code>: List Categories</li>
+                            <li><code>GET /:id</code>: Get Category By Id</li>
+                            <li><code>PUT /:categoryId</code>: Update Category</li>
+                            <li><code>DELETE /:categoryId</code>: Delete Category By ID</li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="service-card">
+                <h3>Order Service</h3>
+                <p>Manages customer orders and order processing.</p>
+                <ul>
+                    <li>Handles order creation, retrieval, and updates.</li>
+                    <li>Endpoints:
+                        <ul>
+                            <li><code>POST /</code>: Create An Order</li>
+                            <li><code>GET /mine</code>: Get User Orders</li>
+                            <li><code>PUT /:id/pay</code>: Mark Order As Paid</li>
+                            <li><code>GET /total-sales</code>: Calculate Total Sales</li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="service-card">
+                <h3>Product Service</h3>
+                <p>Manages product data, including adding, updating, and fetching products.</p>
+                <ul>
+                    <li>Manages stock and inventory.</li>
+                    <li>Endpoints:
+                        <ul>
+                            <li><code>POST /</code>: Add Product</li>
+                            <li><code>GET /top</code>: Fetch Top Products</li>
+                            <li><code>POST /:id/reviews</code>: Add Product Review</li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="service-card">
+                <h3>Upload Service</h3>
+                <p>Handles file uploads, such as product images and other media files.</p>
+            </div>
+
+            <div class="service-card">
+                <h3>User Service</h3>
+                <p>Manages user authentication and user data.</p>
+                <ul>
+                    <li>Endpoints:
+                        <ul>
+                            <li><code>POST /auth</code>: Login</li>
+                            <li><code>GET /profile</code>: Get User Profile</li>
+                            <li><code>PUT /profile</code>: Update User Profile</li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Architecture Section -->
+        <section id="architecture" class="section">
+            <h2>Architecture</h2>
+            <p><strong>Microservices:</strong> All services are independently developed and deployed, ensuring
+                scalability and flexibility.</p>
+            <p><strong>Database:</strong> MongoDB for consistent and scalable storage.</p>
+            <p><strong>Communication:</strong> RESTful APIs and JWT-based authentication ensure secure communication
+                between services.</p>
+            <p><strong>Logging:</strong> Each service has built-in logging to help monitor and debug the system.</p>
+            <p><strong>Authentication:</strong> JWT is used for secure communication between services, ensuring that
+                only authorized users can access protected endpoints.</p>
+        </section>
+
+        <!-- Setup Section -->
+        <section id="setup" class="section">
+            <h2>Setup Instructions</h2>
+            <ol>
+                <li>Install dependencies for each service:
+                    <pre><code>npm install</code></pre>
+                </li>
+                <li>Create a `.env` file for each service with the following content:
+                    <pre>
+MONGO_URI=<your_mongo_uri>
+JWT_SECRET=<your_jwt_secret>
+LOGGER_PATH=<your_logger_path>
+PORT=<service_port>
+          </pre>
+                </li>
+                <li>Run each service:
+                    <pre><code>npm start</code></pre>
+                </li>
+                <li>Test with tools like Postman to ensure endpoints are functional.</li>
+            </ol>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <p>&copy; 2024 Weirdstore - Open Source Project</p>
+    </footer>
+</body>
+
+</html>
