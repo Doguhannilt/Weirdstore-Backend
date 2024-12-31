@@ -2,6 +2,8 @@
 
 **Weirdstore** is a comprehensive and innovative store management system designed to simplify and enhance the way you run your store. Whether you are managing a small boutique or a large retail chain, weirdstore provides the tools you need to succeed.
 
+<p>Frontend Repository: <a href="https://github.com/Doguhannilt/Weirdstore-Fullstack?tab=readme-ov-file#images-and-video">Images - Video</a></p>
+
 # Microservices Architecture
 
 This project consists of several independent microservices that are designed to work together as part of a distributed system. Each service is responsible for a specific domain of the application and communicates through APIs. The services use MongoDB for data storage and are designed to scale and operate independently.
